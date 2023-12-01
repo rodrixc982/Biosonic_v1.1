@@ -1,0 +1,54 @@
+{
+  "name": "BIOSONIC",
+  "version": "1.0.0",
+  "description": "Descripción de tu aplicación",
+  "author": "IIAP-2023",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.tuapp",
+    "productName": "Biosonic",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "about/Imagen1-modified.png"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "about/IIAP-Logo.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "about/IIAP-Logo.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^13.1.8",
+    "electron-builder": "^22.12.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.13.0",
+    "axios": "^1.6.1",
+    "express": "^4.18.2",
+    "h5js": "^0.0.1"
+  }
+}
+
+
